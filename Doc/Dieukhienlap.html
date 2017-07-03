@@ -1,0 +1,44 @@
+﻿<doctype! html/>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Điều khiển lặp - Mảng</title>
+		<script>
+			var sanpham=new Array();
+			var l=0;
+			function themsp(){
+				var ten_sp= prompt('Nhập tên sản phẩm');
+				sanpham.push(ten_sp);
+				l++;
+				hienthi_sanpham();
+				
+				
+			}
+			function xoa(){
+				l--;
+				hienthi_sanpham();
+			}
+			function hienthi_sanpham(){
+				var _html='';
+				for (var i=0;i<l;i++)
+					_html+= '<tr><td>'+(i+1)+'</td><td>'+sanpham[i]+'</td><td>'+'<button type="button" onclick="xoa();">Xóa</button>'+'</td></tr>';		
+					document.getElementById('ds_sanpham').innerHTML=_html;
+					}
+		</script>
+
+	</head>
+	<body>
+		<button type="button" onclick="themsp();">Thêm sản phẩm</button>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>STT</td>
+					<td>Tên sản phẩm</td>
+				    <td>Xóa</td> 
+				</tr>
+			</thead>
+			<tbody id="ds_sanpham">
+			</tbody>
+		</table>
+	</body>
+</html>

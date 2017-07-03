@@ -1,0 +1,26 @@
+/* Main css apply to all pages in website*/
+/* reset css*/
+*{padding: 0; margin: 0}
+body{
+	background-color: #C3C3C3;
+	font-family: "Roboto","segoe ui", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+}
+a{text-decoration: none;}
+a:hover{color: #000}
+
+#wrapper{width: 1000px; margin: 0 auto; background-color: #FFF; color: #666; min-height: 1200px}
+/*Begin header*/
+#header{width: 1000px; float: left; height: 150px; }
+#header #top-menu{width: 1000px; float: left; height: 20px; background-color: blue}
+#header #top-menu ul{list-style: none;}
+#header #top-menu ul li{display: inline;}
+#header #top-menu ul li a{color: #FFF; padding: 2px 15px;}
+#header #top-menu ul li a:hover{text-decoration: underline; color: #CCC}
+#header #top-menu ul li .icon{width: 15px; height: 15px; background-color: #FFF; padding: 3px 3px;}
+#header #top-menu ul li .icon-home{background-image: url('../Images/icon-home.png'); background-repeat: no-repeat; background-position: center;}
+#header #top-menu ul li .icon-mapsite{background-image: url('../Images/icon-home.png');background-repeat: no-repeat; background-position: center;}
+/*End header*/
+#content{width: 1000px;  float: left;}
+#footer{width: 1000px; height: 200px; float: left; }

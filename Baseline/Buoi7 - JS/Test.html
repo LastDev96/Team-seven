@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// Tạo cấu trúc đối tượng User
+	function User(name, age) {
+  		this.ten = name;
+  		this.tuoi = age;
+	}
+// Thêm phương thức getName cho đối tượng User
+	User.prototype.getName = function () {
+  		return this.ten;
+	};
+// Thêm phương thức getAge cho đối tượng User
+	User.prototype.getAge = function () {
+  		return this.tuoi;
+	};
+
+// Tạo một biến user lưu đối tượng User
+var user = new User("Bob", 44);
+// Kiểm tra hai phương thức của đối tượng
+alert(user.getName());
+alert(user.getAge());
+</script>
+</html>

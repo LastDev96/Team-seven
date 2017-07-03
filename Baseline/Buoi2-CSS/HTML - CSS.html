@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML - CSS</title>
+	<style>
+		h3{
+			color: #09FB03;
+			text-decoration: underline;
+		}
+		/* Selector là thẻ html những format sẽ được áp dụng cho tất cả các thẻ html được chọn */
+		input{
+			background-color: yellow;
+		}
+		/* Selector là id (identity) giá trị của id là duy nhất */
+		#noidungdon1{
+			color: red;
+		}
+		/* Selector là class: trong 1 tài liệu html các thẻ có thể trùng class */
+		.doanvan{
+			width: 300px;
+			height: 200px;
+			background-color: aqua;
+		}
+		/* Selector là nhóm */
+		input, #noidungdon2, .doanvan{
+			font-style: italic;
+			font-size: 16px;
+		}
+	</style>
+	<link rel="stylesheet" href="cach3.css" type="text/css" />
+</head>
+<body>
+	<h1>HTML - CSS</h1>
+	<!-- Cách 1: Nhúng css trực tiếp trong thuộc tính style -->
+	<h2 style="color: red; font-style: italic;">Nhúng CSS cách 1</h2>
+	<!-- Sử dụng cặp thẻ style để chèn mã css -->
+	<h3>Nhúng CSS cách 2</h3>
+	<!-- Nhúng file css độc lập vào trang html -->
+	<!-- Cách 3 dùng để tái sử dụng các đoạn mã giống nhau ở nhiều trang khác nhau -->
+	<h4>Nhúng CSS cách 3</h4>
+
+	<!-- Cú pháp của Selector -->
+	<h2>CSS - SELECTOR - bộ chọn</h2>
+	<input type="text" size="30" value="Giá trị mặc định" />
+	<p id="noidungdon1" class="doanvan">Nội dung đoạn văn 1</p>
+	<p id="noidungdon2" class="doanvan">Nội dung đoạn văn 2</p>
+	<p class="trichdan">Nội dung trích dẫn</p>
+</body>
+</html>

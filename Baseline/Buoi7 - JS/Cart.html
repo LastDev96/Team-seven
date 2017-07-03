@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ví dụ Giỏ hàng bằng javascript</title>
+	<style>
+		ul li{
+			list-style-type: none;
+			display: block;
+			width: 200px;
+			float: left;
+			background-color: teal;
+			padding: 10px;
+			margin: 5px;
+		}
+	</style>
+	
+</head>
+<body>
+	<h1>Giỏ hàng</h1>
+	<p id="tongsanpham">0 sản phẩm</p>
+	<p id="tongtien"></p>
+	<hr>
+	<h2>Cửa hàng</h2>
+	<ul id="cuahang">
+	</ul>
+</body>
+<script>
+		var ds_sp = [
+			['SP1','Samsung galaxy S8',12000000,'sp1.jpg'],
+			['SP2','Iphone 5s',8000000,'sp2.jpg'],
+			['SP3','Iphone 6',9000000,'sp3.jpg'],
+			['SP4','Iphone 6s',10000000,'sp4.jpg'],
+			['SP5','Samsung galaxy note 8',19000000,'sp1.jpg'],
+			['SP6','Mobile star',400000,'sp6.jpg']
+		];
+		var _giohang = [];
+		function showSanPham() {
+			var _cuahang = document.getElementById('cuahang');
+			_cuahang.innerHTML="";
+			var _html='';
+			for (var i=0;i<ds_sp.length;i++) {
+				_html += '<li>';
+					_html += '<h3>'+ds_sp[i][1]+'</h3>';
+					_html += '<h3>'+ds_sp[i][0]+'</h3>';
+					_html += '<p><img src="Images/'+ds_sp[i][3]+'" width="150" height="100" alt=""></p>';
+					_html += '<h4>'+ds_sp[i][2]+'</h4>';
+					_html += '<button type="button" id="sp_i" onclick="muaSanPham('+i+');">Mua hàng</button>';
+				_html +='</li>';
+			}
+			_cuahang.innerHTML = _html;
+		}
+		function muaSanPham(i){
+			_giohang.push(ds_sp[i]);
+			alert('Đã thêm sản phẩm '+ ds_sp[i][1]+' vào giỏ hàng!');
+			document.getElementById('tongsanpham').innerHTML=_giohang.length+" sản phẩm";
+			var tien = 0;
+			for (var j = 0; j < _giohang.length; j++) {
+				tien+=_giohang[j][2];
+			}
+			document.getElementById('tongtien').innerHTML=tien+" VNĐ";
+		}
+		showSanPham();
+	</script>
+</html>

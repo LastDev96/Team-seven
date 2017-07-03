@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mang</title>
+	<script>
+		var sanpham = Array();
+		function them_sanpham() {
+			var ten_sp = prompt('Nhập tên sản phẩm: ');
+			sanpham.push(ten_sp);
+			hienthi_sanpham();
+		}
+		function hienthi_sanpham(){
+			var _html = '';
+			for (var i = 0; i<sanpham.length; i++) {
+				_html += '<tr><td>'+(i+1)+'</td><td>'+sanpham[i]+'</td><td><button type="button" onclick="xoa_sanpham('+i+');">Xóa</button></td></tr>';
+			}
+			document.getElementById('ds_sp').innerHTML=_html;
+		}
+		function xoa_sanpham(i){
+			sanpham.splice(i, i+1);
+			hienthi_sanpham();
+		}
+	</script>
+</head>
+<body>
+	
+	<button type="button" onclick="them_sanpham();">Nhập vào tên sản phẩm</button>
+	<h1>Danh sách sản phẩm</h1>
+	<table border="1">
+		<thead>
+			<tr><td>STT</td><td>Tên sản phẩm</td><td>Xóa</td></tr>
+		</thead>
+		<tbody id="ds_sp"></tbody>
+	</table>
+</body>
+</html>

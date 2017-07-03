@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Cặp thẻ tiêu đề, nội dung trong tiêu dề sẽ được trình duyệt load đầu tiên -->
+<head>
+	<!-- Thẻ đơn meta định nghĩ bảng mã mà nội dung sử dụng -->
+	<meta charset="UTF-8">
+	<!-- Nội dung trong thẻ tiêu đề sẽ được hiển thị trong tiêu đề của trình duyệt -->
+	<title>Tiêu đề của trang web</title>
+	<!-- Ngoài ra, thẻ head còn chứa các nội dung của css và js -->
+</head>
+
+<body>
+	<!-- Các nội dung hiển thị trong trình duyệt được đặt trong cặp thẻ body -->
+	<!-- Thẻ head (h) được sử dụng để định dạng nội dung là tiêu đề của trang web. Có 6 cấp độ tiêu đề từ h1 ... đến h6 theo chiều giảm dần -->
+	<h1>Tiêu đề cấp 1</h1>
+	<h2>Tiêu đề cấp 2</h2>
+	<h3>Tiêu đề cấp 3</h3>
+	<h4>Tiêu đề cấp 4</h4>
+	<h5>Tiêu đề cấp 5</h5>
+	<h6>Tiêu đề cấp 6</h6>
+
+	<h1>Thẻ định dạng đoạn văn</h1>
+	<!-- Sử dụng để định dạng đoạn văn các khối văn bản thành các đoạn văn, có ngắt đoạn -->
+	<p>Những cái tên quen thuộc như Quang Anh, Ngọc Duy, Mai Chí Công,... tất cả các cậu bé từng "làm mưa làm gió" trên sân khấu Giọng hát Việt nhí đã hoàn toàn lột xác.</p>
+	<p>đã từ rất lâu rồi... trong a định nghĩa 2 tiếng yêu thương a không thể trao cho ai kể từ khi a có em
+	Nghỉ hè này anh có emmm. Học kì phụ ạ</p>
+	<h1>Các cặp thẻ định dạng text</h1>
+
+	<p><b>Chữ in đâm</b></p>
+	<p><i>Chữ in nghiêng</i></p>
+	<p><u>Chữ gạch dưới</u></p>
+	<p>Chỉ số trên: ax<sup>2</sup> + bx + c = 0</p>
+	<p>Chỉ số dưới: H<sub>2</sub>O</p>
+	
+	<h1>Cặp thẻ liên kết</h1>
+	<!-- thẻ liên kết có tác dụng các webpage với nhau -->
+	<a href="https://www.facebook.com">Thẻ liên kết</a>
+	<br/> <!-- thẻ break để ngắt dòng -->
+	
+
+	<a href="http://dantri.com.vn" target="_blank">Liên kết chuyển sang cửa sổ mới</a>
+	<h1>Thẻ hình ảnh</h1>
+	<p>Thẻ hình ảnh (image) được sử dụng để hiển hình ảnh trong webpage</p>
+	<img src="hinhanh/anh1.jpg" alt="anh1" width="450px" height="200px" />
+
+	<h1>Thẻ bảng biểu</h1>
+	<table border="1">
+		<tr>
+			<td>Dòng 1 - cột 1</td>
+			<td>Dòng 1 - cột 2</td>
+			<td>Dòng 1 - cột 3</td>
+		</tr>
+		<tr>
+			<td>Dòng 2 - cột 1</td>
+			<td>Dòng 2 - cột 2</td>
+			<td>Dòng 2 - cột 3</td>
+		</tr>
+		<tr>
+			<td>Dòng 3 - cột 1</td>
+			<td>Dòng 3 - cột 2</td>
+			<td>Dòng 3 - cột 3</td>
+		</tr>
+	</table>
+
+	<h2>Merger các ô trên cùng dòng</h2>
+
+	<table border="1">
+		<tr>
+			<td colspan="3">Dòng 1 - cột 1</td>
+		</tr>
+		<tr>
+			<td>Dòng 2 - cột 1</td>
+			<td>Dòng 2 - cột 2</td>
+			<td>Dòng 2 - cột 3</td>
+		</tr>
+		<tr>
+			<td>Dòng 3 - cột 1</td>
+			<td>Dòng 3 - cột 2</td>
+			<td>Dòng 3 - cột 3</td>
+		</tr>
+	</table>
+
+	<h2>Merger các ô trên cùng cột</h2>
+	<table border="1">
+		<tr>
+			<td>Dòng 1 - cột 1</td>
+			<td>Dòng 1 - cột 2</td>
+			<td rowspan="3">Dòng 1 - cột 3</td>
+		</tr>
+		<tr>
+			<td>Dòng 2 - cột 1</td>
+			<td>Dòng 2 - cột 2</td>
+		</tr>
+		<tr>
+			<td>Dòng 3 - cột 1</td>
+			<td>Dòng 3 - cột 2</td>
+		</tr>
+	</table>
+
+	<h2>Bài tập</h2>
+	<table border="1">
+		<tr>
+			<td>1 - 1</td>
+			<td rowspan="3" style="border: none;">1 - 2</td>
+			<td>1 - 3</td>
+		</tr>
+		<tr>
+			<td colspan="3" style="border: none;">2 - 1</td>
+		</tr>
+		<tr>
+			<td>3 - 1</td>
+			<td>3 - 3</td>
+		</tr>
+	</table>
+	
+	<h1>Thẻ danh sách - ul và ol</h1>
+	<h2>Danh sách không sắp xếp  - unorder list (ul)</h2>
+	<ul>
+		<li>Dân trí</li>
+		<li>Vnexperess</li>
+		<li>Vietnamnet</li>
+		<li>Bongdaplus</li>
+	</ul>
+	<h2>Danh sách sắp xếp - oder list (ol)</h2>
+	<ol type="I">
+		<li>Dantri</li>
+		<li>Vnexperess</li>
+		<li>Vietnamnet</li>
+		<li>Bongdaplus</li>
+	</ol>
+
+	<h1>Thẻ Iframe</h1>
+	<p>Thẻ được sử dụng để nhúng nội dung của 1 trang web khác vào trang hiện tại</p>
+	<iframe src="http://kenh14.vn" frameborder="0" width="300" height="300"></iframe>
+</body>
+</html>

@@ -1,0 +1,74 @@
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<title>Menu</title>
+				<style>
+					body{
+						background-color: gray;
+					}
+					a{
+						color: #fff; text-decoration: none;
+						line-height: 50px;
+						}
+						#menu-cha{
+							width: 800px; height: 50px;
+							background-color: #FFF;
+							margin: 0 auto;
+							background-color: #e4e4e4;
+						}
+						#menu-cha a{
+							color: gray;
+						}
+						#menu-cha li{
+							display: inline;
+							padding: 15px 35px;
+						}
+						.menu-con{
+							display: none;
+						}
+						#menu-cha li:hover{
+							background-color: #f2f2f2;
+						}
+						#menu-cha li a:hover{
+							color: violet;
+						}
+						#menu-cha li:hover .menu-con{
+							display: block;
+							background-color: #f2f2f2;
+							top: 10px;
+						}
+				</style>
+			</head>
+			<body>
+				<ul id="menu-cha">
+					<li><a href="" id="nuthome"></a></li>
+					<li><a href="">Nhạc cá nhân</a></li>
+					<li><a href="#">Chủ đề</a>
+							<div class="menu-con">
+								<ul>
+									<li class="tieude"><h3>Việt Nam</h3></li>
+									<li><a href="#">Nhạc trẻ</a></li>
+									<li><a href="#">Nhạc vàng</a></li>
+									<li><a href="#">Nhạc đỏ</a></li>
+									<li><a href="#">Nhạc thiếu nhi</a></li>
+								</ul>
+								<ul>
+									<li class="tieude"><h3>Hàn Quốc</h3></li>
+									<li><a href="#">Nhạc trẻ</a></li>
+									<li><a href="#">Nhạc vàng</a></li>
+									<li><a href="#">Nhạc đỏ</a></li>
+									<li><a href="#">Nhạc thiếu nhi</a></li>
+								</ul>
+								<ul>
+									<li class="tieude"><h3>Nhạc US-UK</h3></li>
+									<li><a href="#">Nhạc trẻ</a></li>
+									<li><a href="#">Nhạc vàng</a></li>
+									<li><a href="#">Nhạc đỏ</a></li>
+									<li><a href="#">Nhạc thiếu nhi</a></li>
+								</ul>
+							</div>
+						</li>
+				</ul>
+			</body>
+			</html>

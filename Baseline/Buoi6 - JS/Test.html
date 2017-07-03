@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>haha</title>
+	<script>
+		var a; 
+		function nhap() {
+			a = prompt('Nhập vào 1 thứ gì đó!','Nhập...');
+			if(parseInt(a)!=2910){
+				while(parseInt(a)!=2910){
+					a = prompt('Nhập vào 1 thứ gì đó!','Nhập...');
+				}
+			}else{
+				alert('Nhập đúng!!!');
+			}
+		}
+	</script>
+</head>
+<body>
+	<button type="button" onclick="nhap();">Click here</button>
+</body>
+</html>

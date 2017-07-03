@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object</title>
+</head>
+<body>
+	<h1>Quản lý sản phẩm</h1>
+	<h3>Tác vụ: </h3>
+	<button type="button" onclick="themsp();" id="btnThem">Thêm sản phẩm</button>
+	<h3>Danh sách sản phẩm</h3>
+	<table width="700">
+		<thead>
+			<tr>
+				<td>STT</td>
+				<td>Tên sản phẩm</td>
+				<td>Giá</td>
+				<td colspan="2">Tác vụ</td>
+			</tr>
+		</thead>
+		<tbody id="tblDS">
+		</tbody>
+	</table>
+</body>
+<script>
+	function sanpham(name, cost){
+		this.ten=name;
+		this.gia=cost;
+	}
+	var ds_sp = new Array();
+	function themsp(){
+		var a = prompt('Nhập sản phẩm','Tên sản phẩm');
+		var b = parseInt(prompt('Nhập sản phẩm','Giá'));
+		var _sp = new sanpham();
+		_sp.ten = a;
+		_sp.gia = b;
+		ds_sp.push(_sp);
+		hienThi();
+	}
+	function hienThi(){
+		var _kho = document.getElementById('tblDS');
+		var _html = '';
+		for(var i=0;i<ds_sp.length;i++){
+			_html += '<tr>';
+				_html += '<td>'+(i+1)+'</td>';
+				_html += '<td>'+ds_sp[i].ten+'</td>';
+				_html += '<td>'+ds_sp[i].gia+'</td>';
+				_html += '<td>';
+					_html += '<button type="button" onclick="suaSP('+i+')">Sửa</button><button type="button" onclick="xoaSP('+i+')">Xóa</button>';
+				_html += '</td>';
+			_html += '</tr>';
+		}
+		_kho.innerHTML = _html;
+	}
+	function suaSP(i){
+		var _html = '';
+		var a = prompt('Sửa sản phẩm','Tên sản phẩm');
+		var b =parseInt(prompt('Sửa sản phẩm','Giá sản phẩm'));
+		ds_sp[i].ten=a;
+		ds_sp[i].gia=b;
+		hienThi();
+	}
+	function xoaSP(i){
+		ds_sp.splice(i, 1);
+		hienThi();
+	}
+</script>
+</html>
