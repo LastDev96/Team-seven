@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OOP-JS</title>
+</head>
+<body>
+	<h1>Quản lý học sinh</h1>
+	<button type="button" id="btnThem" onclick="javascript: _list.themHS();">+ Thêm học sinh</button>
+	<h3>Danh sách sản phẩm</h3>
+	<table width="700">
+		<thead>
+			<tr>
+				<td>STT</td>
+				<td>Họ và tên</td>
+				<td>Tuổi</td>
+				<td colspan="2">Tác vụ</td>
+			</tr>
+		</thead>
+		<tbody id="tblDS">
+		</tbody>
+	</table>
+</body>
+<script>
+	function hocsinh(firstName, lastName, age) {
+		this.ho = firstName;
+		this.ten = lastName;
+		this.tuoi = age;
+		this.getHo = function(){
+			return this.ho;
+		}
+		this.setHo = function(frtName){
+			this.ho = frtName;
+		}
+		this.getTen = function(){
+			return this.ten;
+		}
+		this.setTen = function(lsName){
+			this.ten = lsName;
+		}
+		this.getTuoi = function(){
+			return this.age;
+		}
+		this.setTuoi = function(_age){
+			this.tuoi = _age;
+		}
+		this.getHoTen = function(){
+			return this.getHo() + ' '+this.getTen();
+		}
+	}
+	function ds_hs(){
+		this.list_hs = new Array();
+		this.themHS = function(){
+			var _hs = new hocsinh();
+			_hs.setHo(prompt('Nhập thông tin học sinh!','Nhập họ: '));
+			_hs.setTen(prompt('Nhập thông tin học sinh!','Nhập tên: '));
+			_hs.setTuoi(parseInt(prompt('Nhập thông tin học sinh!','Nhập tuổi: ')));
+			this.list_hs.push(_hs);
+			this.hienthi();
+		}
+		this.hienthi = function(){
+			var _ds = document.getElementById('tblDS');
+			var _html = '';
+			for(var i=0;i<this.list_hs.length;i++){
+				_html += '<tr>';
+					_html += '<td>'+(i+1)+'</td>';
+					_html += '<td>'+this.list_hs[i].getHoTen()+'</td>';
+					_html += '<td>'+this.list_hs[i].getTuoi()+'</td>';
+					_html += '<td>';
+						_html += '<button type="button" onclick="javascript: _list.suaHS('+i+')">Sửa</button><button type="button" onclick="javascript: _list.xoaHS('+i+')">Xóa</button>';
+					_html += '</td>';
+				_html += '</tr>';
+			}
+			_ds.innerHTML = _html;
+		}
+		this.suaHS = function(i){
+			var a = prompt('Nhập thông tin học sinh!','Nhập họ: ');
+			var b = prompt('Nhập thông tin học sinh!','Nhập tên: ');
+			var c = parseInt(prompt('Nhập thông tin học sinh!','Nhập tuổi: '));
+			list_hs[i].setHo(a);
+			list_hs[i].setTen(b);
+			list_hs[i].setTuoi(c);
+			this.hienthi();
+		}
+		this.xoaHS = function(i){
+			list_hs.splice(i,1);
+			this.hienthi();
+		}
+	}
+	var _list = new ds_hs();
+</script>
+</html>
