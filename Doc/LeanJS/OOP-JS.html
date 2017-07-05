@@ -39,7 +39,7 @@
 			this.ten = lsName;
 		}
 		this.getTuoi = function(){
-			return this.age;
+			return this.tuoi;
 		}
 		this.setTuoi = function(_age){
 			this.tuoi = _age;
@@ -77,13 +77,13 @@
 			var a = prompt('Nhập thông tin học sinh!','Nhập họ: ');
 			var b = prompt('Nhập thông tin học sinh!','Nhập tên: ');
 			var c = parseInt(prompt('Nhập thông tin học sinh!','Nhập tuổi: '));
-			list_hs[i].setHo(a);
-			list_hs[i].setTen(b);
-			list_hs[i].setTuoi(c);
+			this.list_hs[i].setHo(a);
+			this.list_hs[i].setTen(b);
+			this.list_hs[i].setTuoi(c);
 			this.hienthi();
 		}
 		this.xoaHS = function(i){
-			list_hs.splice(i,1);
+			this.list_hs.splice(i,1);
 			this.hienthi();
 		}
 	}
